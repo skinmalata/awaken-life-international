@@ -644,14 +644,8 @@ a { color: inherit; text-decoration: none; }
   .section { padding: 72px 0; }
   .topbar-item:nth-child(2) { display: none; }
   .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 44px; }
-  .ministries-grid, .values-grid, .give-details-grid { grid-template-columns: repeat(2, 1fr); }
+  .ministries-grid, .values-grid, .give-details-grid, .services-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
-  .hero-ticker { grid-template-columns: 1fr; }
-  .hero { min-height: 0; }
-}
-
-@media (max-width: 768px) {
-  .topbar-inner { flex-wrap: wrap; gap: 10px; }
   .nav-links {
     position: absolute; top: 100%; left: 0; right: 0;
     flex-direction: column; align-items: flex-start;
@@ -664,6 +658,11 @@ a { color: inherit; text-decoration: none; }
   .nav-links a { display: block; width: 100%; padding: 12px 0; border-bottom: 1px solid #f0ede8; }
   .nav-links .nav-cta { margin-top: 12px; border: 0; }
   .nav-toggle { display: flex; }
+  .hero { min-height: 0; }
+}
+
+@media (max-width: 768px) {
+  .topbar-inner { flex-wrap: wrap; gap: 10px; }
   .services-grid, .ministries-grid { grid-template-columns: 1fr; }
   .service-card.featured { transform: none; }
   .form-row { grid-template-columns: 1fr; }
