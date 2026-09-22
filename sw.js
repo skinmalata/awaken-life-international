@@ -1,4 +1,4 @@
-const CACHE = 'awaken-life-v1';
+const CACHE = 'awaken-life-v2';
 const APP_SHELL = [
   './',
   './index.html',
