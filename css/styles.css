@@ -158,6 +158,14 @@ a { color: inherit; text-decoration: none; }
     radial-gradient(70% 80% at 15% 90%, rgba(212, 161, 44, 0.1), transparent 55%),
     linear-gradient(150deg, var(--midnight) 30%, var(--midnight-3));
 }
+.hero::before {
+  content: '';
+  position: absolute; inset: 0; z-index: 0;
+  background: url('../img/community.jpg') center/cover no-repeat;
+  opacity: 0.18;
+  filter: blur(2px) saturate(1.05);
+  pointer-events: none;
+}
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -234,6 +242,12 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 38px;
 }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+.install-hint {
+  margin-top: 18px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 460px;
+}
 
 /* ---------- Hero ticker ---------- */
 .hero-ticker {

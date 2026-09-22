@@ -1,0 +1,33 @@
+{
+  "name": "Awaken Life International Ministry",
+  "short_name": "Awaken Life",
+  "description": "Awakening lives to the abundant life in Christ Jesus — John 10:10. Sermons, service times, giving and more.",
+  "id": "awaken-life-international",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f1b2d",
+  "theme_color": "#0f1b2d",
+  "categories": ["education", "lifestyle", "social"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

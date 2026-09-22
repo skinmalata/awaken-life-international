@@ -90,4 +90,34 @@ document.addEventListener('DOMContentLoaded', function () {
       if (e.key === 'Escape') closeLightbox();
     });
   }
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('sw.js')['catch'](function () {});
+    });
+  }
+
+  var downloadBtn = document.querySelector('.js-download-app');
+  var installHint = document.getElementById('installHint');
+  if (downloadBtn) {
+    downloadBtn.addEventListener('click', function () {
+      if (deferredPrompt) {
+        installHint.hidden = true;
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then(function () { deferredPrompt = null; });
+      } else {
+        var standalone = window.matchMedia('(display-mode: standalone)').matches;
+        installHint.textContent = standalone
+          ? 'The app is already installed on this device.'
+          : 'Tap the browser menu (···) and choose "Install app" or "Add to Home Screen".';
+        installHint.hidden = false;
+      }
+    });
+  }
+});
+
+var deferredPrompt = null;
+window.addEventListener('beforeinstallprompt', function (e) {
+  e.preventDefault();
+  deferredPrompt = e;
 });
