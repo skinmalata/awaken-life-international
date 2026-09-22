@@ -308,33 +308,11 @@ a { color: inherit; text-decoration: none; }
   width: 100%; height: 100%;
   object-fit: cover; object-position: center top;
 }
-.mandate-card {
-  position: relative; z-index: 2;
-  text-align: center;
-  padding: 40px 34px;
-  max-width: 340px;
+.about-visual > img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
 }
-.mandate-star {
-  width: 62px; height: 62px; margin: 0 auto 20px;
-  display: grid; place-items: center;
-  background: linear-gradient(135deg, var(--gold-light), var(--gold));
-  color: var(--midnight); border-radius: 50%;
-  animation: pulseGlow 3s ease-in-out infinite;
-}
-.mandate-star svg { width: 28px; height: 28px; }
-@keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(238, 200, 119, 0.45); }
-  50% { box-shadow: 0 0 0 16px rgba(238, 200, 119, 0); }
-}
-.mandate-card blockquote {
-  font-family: var(--font-serif); font-style: italic;
-  font-size: 1.35rem; color: var(--white);
-  line-height: 1.45; margin-bottom: 14px;
-  text-shadow: 0 2px 14px rgba(15, 27, 45, 0.7);
-}
-.mandate-card p { color: var(--gold-light); font-size: 0.85rem; letter-spacing: 0.16em; text-transform: uppercase; }
-
-.about-text p { color: var(--muted); margin-bottom: 18px; }
 .about-text strong { color: var(--midnight); }
 .about-list { list-style: none; margin: 26px 0 34px; display: grid; gap: 14px; }
 .about-list li { display: flex; align-items: center; gap: 12px; font-weight: 500; }
