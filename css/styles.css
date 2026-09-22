@@ -162,7 +162,7 @@ a { color: inherit; text-decoration: none; }
   content: '';
   position: absolute; inset: 0; z-index: 0;
   background: url('../img/community.jpg') center/cover no-repeat;
-  opacity: 0.18;
+  opacity: 0.25;
   filter: blur(2px) saturate(1.05);
   pointer-events: none;
 }
